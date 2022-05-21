@@ -1,4 +1,17 @@
-### QR Code Tools
+## QR Code Tools ##
 
-This is a free website for __Read__ and __Generate__ QR Code
-[QR Code Tools](https://qrcodetools.github.io)
+This is a website for **Read** and **Generate** QR Code
+
+>Thanks to CodingNepal and Github for technical support
+
+###### CodingNepal ######
+
+>[Website](https://codingnepalweb.com)
+
+>[Youtube](https://youtube.com/CodingNepal)
+
+##### Github ######
+
+>[Website](https://github.com)
+***
+[QR Code Tools Website](https://qrcodetools.github.io)
