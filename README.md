@@ -1,2 +1,2 @@
 ## QR Code Tools
-~ The free QR Code Tools website
+* The free QR Code Tools website
