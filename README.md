@@ -1,2 +1,3 @@
-## QR Code Tools
-^ The free QR Code Tools website
+# QR Code Tools
+***
+[Website](https://qrcodetools.github.io)
