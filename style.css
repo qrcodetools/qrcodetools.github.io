@@ -72,7 +72,7 @@ header p{
   cursor: pointer;
   color: #fff;
   border: 2px solid #25a17a;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   border-radius: 5px;
   background: #25a17a;
   width: calc(100% / 2 - 8px);
