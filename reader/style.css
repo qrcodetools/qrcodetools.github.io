@@ -167,7 +167,7 @@ textarea::-webkit-scrollbar{
   transition: all 0.5s ease;
   border-radius: 5px;
   background: #25a17a;
-  width: calc(100% / 2 - 10px);
+  width: calc(100% / 2 - 6px);
 }
 
 .buttons button:hover{
