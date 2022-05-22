@@ -8,14 +8,6 @@ Thanks to Github for technical support
 
 >[Website](https://github.com)
 ***
-Thanks to CodingNepal for providing inspiration support
-
-#### CodingNepal ####
-
->[Website](https://codingnepalweb.com)
-
->[Youtube](https://youtube.com/CodingNepal)
-***
 #### QR Code Tools ####
 
 >[Website](https://qrcodetools.github.io)
