@@ -30,6 +30,9 @@ function fetchRequest(file, formData) {
 };
 
 uploadBtn.addEventListener("click", function() {
+    wrapper.classList.remove("active");
+    copyBtn.innerText = "Copy";
+    copyBtn.style = "pointer-events:auto";
     fileInp.click();
 });
 
@@ -45,10 +48,12 @@ copyBtn.addEventListener("click", () => {
     let text = document.querySelector("textarea").textContent;
     navigator.clipboard.writeText(text);
     copyBtn.innerText = "Copied";
+    copyBtn.style = "pointer-events:none";
 });
 
 closeBtn.addEventListener("click", () => {
     fileInp.value = '';
     wrapper.classList.remove("active");
     copyBtn.innerText = "Copy";
+    copyBtn.style = "pointer-events:auto";
 });
