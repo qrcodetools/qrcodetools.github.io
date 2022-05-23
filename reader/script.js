@@ -30,6 +30,7 @@ function fetchRequest(file, formData) {
 };
 
 uploadBtn.addEventListener("click", function() {
+    fileInp.value = '';
     wrapper.classList.remove("active");
     copyBtn.innerText = "Copy";
     copyBtn.style = "pointer-events:auto";
