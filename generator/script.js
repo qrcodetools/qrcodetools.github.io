@@ -38,15 +38,29 @@ closeBtn.addEventListener("click", () => {
     document.querySelector("input").value='';
     wrapper.classList.remove("active");
     preValue = "";
+    downloadBtn.innerText = "Download"
+    downloadBtn.style = "pointer-events:auto";
 });
 
 downloadBtn.addEventListener("click", e => {
+    downloadBtn.innerText = "Downloading..."
     e.preventDefault();
     fetchFile('https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + qrInput.value);
 });
 
 function fetchFile(url) {
     fetch(url).then(res => res.blob()).then(file => {
-        console.log(file);
-    })
+        let tempUrl = URL.createObjectURL(file);
+        let aTag = document.createElement("a");
+        aTag.href = tempUrl;
+        aTag.download = ('qrcode - ' + qrInput.value);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+        downloadBtn.innerText = "Downloaded";
+        downloadBtn.style = "pointer-events:none";
+    }).catch(() => {
+        downloadBtn.innerText = "Error";
+        downloadBtn.style = "pointer-events:auto";
+    });
 };
