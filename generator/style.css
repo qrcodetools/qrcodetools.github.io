@@ -164,14 +164,14 @@ header p{
   background: #fff;
 }
 
-.change-btn{
+.changeBtn{
   position: fixed;
   bottom: 40px;
   left: 40px;
   z-index: 99999;
 }
 
-.change-btn a{
+.changeBtn a{
   background: none;
   padding: 13px 22px;
   font-size: 16px;
@@ -182,12 +182,12 @@ header p{
   transition: all 0.4s ease;
 }
 
-.change-btn a:hover{
+.changeBtn a:hover{
   color: #278b59;
   background: #fff;
 }
 
-.change-btn:active{
+.changeBtn:active{
   transform: scale(0.95);
 }
 
