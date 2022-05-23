@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">  
+  <meta charset="utf-8">  
   <title>Generator - QR Code Tools</title>
   <link rel="stylesheet" href="style.css">
   <link href="../image/logo.png" rel="shortcut icon">
@@ -14,18 +14,29 @@
     </header>
 
     <div class="form">
-      <input type="text" spellcheck="false" placeholder="Enter text or URL">
+      <input type="text" spellcheck="false" placeholder="Enter text or URL" id="input">
       <button>Generate QR Code</button>
     </div>
 
-    <div class="qr-code">
-      <img src="" alt="qr-code">
+    <div class="details">
+      <div class="qr-code">
+        <img src="" alt="qr-code">
+      </div>
+  
+      <div class="buttons"> 
+        <button class="close">Close</button>
+        <button class="download">Download</button>
+      </div>
     </div>
 
   </div>
 
-  <div class="readerPage">
-    <a href="../reader/">QR Code Reader</a>
+  <div class="change-btn">
+    <a href="../reader/" target="_blank">QR Code Reader</a>
+  </div>
+
+  <div class="copyright">
+    <p>© QR Code Tools 2022</p>
   </div>
 
   <script src="script.js"></script>

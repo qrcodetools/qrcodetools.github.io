@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@400&family=Roboto:wght@300;400;500;700&display=swap');
 
 *{
   margin: 0;
@@ -7,32 +7,52 @@
   font-family: 'Roboto';
 }
 
+::selection{
+  color: #fff;
+  background: #278b59;
+}
+
 body{
+  opacity: 0;
   display: flex;
   padding: 0 10px;
   min-height: 100vh;
   align-items: center;
-  background: #25a17a;
   justify-content: center;
+  background: #278b59;
+  transition: all 0.4s 0.04s ease;
 }
 
-::selection{
-  color: #fff;
-  background: #25a17a;
+body .wrapper{
+  transition: 0.35s ease;
+  transform: translateY(30px);
+}
+
+body.active{
+  opacity: 1;
+}
+
+body.active .wrapper{
+  transform: translateY(0px);
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .wrapper{
-  height: 265px;
+  height: 250px;
   max-width: 410px;
   background: #fff;
   border-radius: 7px;
   padding: 20px 25px 0;
+  margin: 0 0 10px;
   transition: height 0.2s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .wrapper.active{
-  height: 530px;
+  height: 510px;
 }
 
 header h1{
@@ -50,16 +70,12 @@ header p{
   margin: 20px 0 25px;
 }
 
-.form :where(input, button){
+.form input{
   width: 100%;
   height: 55px;
-  border: none;
   outline: none;
   border-radius: 5px;
   transition: 0.1s ease;
-}
-
-.form input{
   font-size: 18px;
   padding: 0 17px;
   border: 1px solid #999;
@@ -74,14 +90,26 @@ header p{
 }
 
 .form button{
+  width: 100%;
+  height: 55px;
+  outline: none;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   margin-top: 20px;
   font-size: 17px;
-  background: #25a17a;
+  border: 2px solid #278b59;
+  background: #278b59;
+  transition: all 0.4s ease;
 }
 
-.qr-code{
+.form button:hover{
+  color: #278b59;
+  background: #fff;
+}
+
+.details .qr-code{
+  height: 155px;
   opacity: 0;
   display: flex;
   padding: 33px 0;
@@ -99,36 +127,51 @@ header p{
 }
 
 .qr-code img{
-  width: 170px;
+  width: 120px;
 }
 
-@media (max-width: 430px){
-  .wrapper{
-    height: 255px;
-    padding: 16px 20px;
-  }
-  .wrapper.active{
-    height: 510px;
-  }
-  header p{
-    color: #696969;
-  }
-  .form :where(input, button){
-    height: 52px;
-  }
-  .qr-code img{
-    width: 160px;
-  }  
+.details .buttons{
+  opacity: 0;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
 }
 
-.readerPage{
+.buttons button{
+  height: 55px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 17px;
+  border: 2px solid #278b59;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background: #278b59;
+  transition: all 0.3s ease;
+  width: calc(100% / 2 - 6px);
+}
+
+.wrapper.active .buttons{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.buttons button:hover{
+  color: #278b59;
+  background: #fff;
+}
+
+.change-btn{
   position: fixed;
   bottom: 40px;
   left: 40px;
   z-index: 99999;
 }
 
-.readerPage a{
+.change-btn a{
   background: none;
   padding: 13px 22px;
   font-size: 16px;
@@ -136,20 +179,35 @@ header p{
   text-decoration: none;
   border-radius: 6px;
   border: 2px solid #fff;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-.readerPage a:hover{
-    color: #25a17a;
-    background: #fff;
+.change-btn a:hover{
+  color: #278b59;
+  background: #fff;
 }
 
-@media screen and (max-width: 600px){
-    .readerPage{
-        left: 20px;
-    }
-    .readerPage a{
-        font-size: 13px;
-        padding: 9px 15px;
-    }
+.change-btn:active{
+  transform: scale(0.95);
+}
+
+button:active{
+  transform: scale(0.95);
+}
+
+.copyright{
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  padding: 3px 6px 3px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.copyright p{
+  font-family: 'Akshar';
+  font-size: 16px;
+  font-weight: 400;
+  cursor: default;
+  color: #000;
 }

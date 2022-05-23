@@ -1,8 +1,18 @@
-const wrapper = document.querySelector(".wrapper"),
+const body = document.querySelector("body"),
+      wrapper = document.querySelector(".wrapper"),
       qrInput = wrapper.querySelector(".form input"),
       generateBtn = wrapper.querySelector(".form button"),
-      qrImg = wrapper.querySelector(".qr-code img");
+      qrImg = wrapper.querySelector(".qr-code img"),
+      closeBtn = wrapper.querySelector(".buttons .close"),
+      downloadBtn = wrapper.querySelector(".buttons .download")
       
+
+window.onload = winready;
+
+function winready() {
+    body.classList.add("active");
+};
+
 let preValue;
 
 generateBtn.addEventListener("click", () => {
@@ -23,3 +33,20 @@ qrInput.addEventListener("keyup", () => {
         preValue = "";
     }
 });
+
+closeBtn.addEventListener("click", () => {
+    document.querySelector("input").value='';
+    wrapper.classList.remove("active");
+    preValue = "";
+});
+
+downloadBtn.addEventListener("click", e => {
+    e.preventDefault();
+    fetchFile('https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + qrInput.value);
+});
+
+function fetchFile(url) {
+    fetch(url).then(res => res.blob()).then(file => {
+        console.log(file);
+    })
+};
