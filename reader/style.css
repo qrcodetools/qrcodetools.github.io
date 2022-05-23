@@ -9,7 +9,7 @@
 
 ::selection{
   color: #fff;
-  background: #25a17a;
+  background: #278b59;
 }
 
 body{
@@ -19,7 +19,7 @@ body{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #25a17a;
+  background: #278b59;
   transition: all 0.4s 0.04s ease;
 }
 
@@ -82,13 +82,13 @@ form{
   transition: all 0.4s ease;
   font-size: 17px;
   margin-top: 20px;
-  border: 2px solid #25a17a;
+  border: 2px solid #278b59;
   border-radius: 5px;
-  background: #25a17a;
+  background: #278b59;
 }  
 
 .uploadBtn:hover{
-  color: #25a17a;
+  color: #278b59;
   background-color: #fff;
 }
 
@@ -168,15 +168,15 @@ textarea::-webkit-scrollbar{
   font-size: 16px;
   cursor: pointer;
   color: #fff;
-  border: 2px solid #25a17a;
+  border: 2px solid #278b59;
   transition: all 0.5s ease;
   border-radius: 5px;
-  background: #25a17a;
+  background: #278b59;
   width: calc(100% / 2 - 6px);
 }
 
 .buttons button:hover{
-  color: #25a17a;
+  color: #278b59;
   background-color: #fff;
 }
 
@@ -203,7 +203,7 @@ button:active{
 }
 
 .changeBtn a:hover{
-    color: #25a17a;
+    color: #278b59;
     background: #fff;
 }
 
